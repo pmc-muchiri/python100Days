@@ -8,5 +8,3 @@
 #animals = ["Dog", "Lion", "Kuku"]
 states_of_america = ["Califonia", "Penna", "NY", "Minnesota", "Arizona", "Hawaii", "New Mexico", "Uta", "Idaho"]
 print(states_of_america[6])
-
-states_of_america[1] = penni
