@@ -55,7 +55,7 @@ def play_videos():
 
 # Create the main window
 window = tk.Tk()
-window.title("YouTube Video Scheduler")
+window.title("Pmc YouTube Video Scheduler")
 
 # Create a label for the CSV file path
 csv_label = tk.Label(window, text="CSV File Path:")
