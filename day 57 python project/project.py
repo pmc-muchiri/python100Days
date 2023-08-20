@@ -33,8 +33,14 @@ def validate_dob(date_birth):
 
 
 # Function to add a new user
-def add_user(mobile_number, password):
-    users.append({'username': mobile_number, 'password': password})
+def add_user(name, address, mobile_number, password, date_birth):
+    users.append({
+        'name': name,
+        'address': address,
+        'mobile_number': mobile_number,
+        'password': password,
+        'date_birth': date_birth
+    })
 
 
 # Function to validate user credentials during sign-in
@@ -60,7 +66,7 @@ def signup():
         print("Invalid name, Ensure to put your Two names and Start with a capital:\n")
         return
 
-    input("Please enter your address or press enter to skip:\n")
+    address = input("Please enter your address or press enter to skip:\n")
 
     mobile_number = input("Please enter your Mobile number:\n")
     if is_username_taken(mobile_number):
@@ -82,7 +88,7 @@ def signup():
         return
 
     # Add the new user to the list
-    add_user(mobile_number, password)
+    add_user(names, address, mobile_number, password, date_birth)
     print("Signup successful!")
 
 
@@ -115,5 +121,7 @@ if choice == 1:
     signup()
 elif choice == 2:
     signin()
+elif choice == 3:
+    exit("Bye")
 else:
     print("Invalid choice. Please try again.\n")
